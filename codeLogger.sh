@@ -15,12 +15,12 @@ cd ../
 echo -e "\n\033[32mSourcing Files ...\033[39m\n"
 cat ./logs_test/filesToLog.txt | while read i; do
     if [[ $i == *".R" ]]; then
-        today=$(date +"%Y_%m_%d")
+        today=$(date +"%Y-%m-%d-%H%M")
         fileName=$(echo ".logs_test/$i" | sed "s/\.R/_$today\.txt/")
         Rscript $1/$i >& $fileName
         echo "Logged $i"
     elif [[ $i == *".py" ]]; then
-        today=$(date +"%Y_%m_%d")
+        today=$(date +"%Y-%m-%d-%H%M")
         fileName=$(echo ".logs_test/$i" | sed "s/\.R/_$today\.txt/")
         python.exe $1/$i >& $fileName
         echo "Logged $i"
