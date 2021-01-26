@@ -1,6 +1,6 @@
 # Overview
 
-codeLogger is a bash script that will create a directory, titled 'logs_test', to mirror the directory creating your code, find all R and python files, run them and log their output to a text file in the logs directory. This is useful at the end of a project when you want to immortalize the output or during development as you change upstream code and are interested in identifying all downstream changes.
+codeLogger is a bash script that will create a directory, titled 'logs', to mirror the directory where your code resides, find all R and python files, run them and log their output to a text file in the logs directory. This is useful at the end of a project when you want to immortalize the output or during development as you change upstream code and are interested in identifying all downstream changes.
 
 For example, let's say you have finished constructing your data and doing multiple descriptive analyses on it. However, you realize that you made an error in the data construction. So you fix the error but now have to re-run all of the descriptives to check which values changed and which didn't. Using codeLogger, you can easily compare specific analysis files to quickly and accurately identify which descriptive statistics changed and which didn't.
 
@@ -8,7 +8,7 @@ Note, codeLogger will run ALL the .R and .py files contained within the sub-dire
 
 # How to use
 
-codeLogger should be run using your bash terminal of choice (git-bash on windows) from the root of the project directory and given the name of the folder containing your code: `path/to/codeLogger.sh ./code`. If successful, you will find the results in a folder titled 'logs_test' that has a directory structure mirroring that of the one where your code lives. In place of the .R or .py files will be .txt files containing the logs.
+codeLogger should be run using your bash terminal of choice (git-bash on windows) from the root of the project directory and given the name of the folder containing your code: `path/to/codeLogger.sh ./code`. If successful, you will find the results in a folder titled 'logs' that has a directory structure mirroring that of the one where your code lives. In place of the .R or .py files will be .txt files containing the logs.
 
 codeLogger works best when your analysis files are organized in a sub-directory within the larger project folder. For example:
 
