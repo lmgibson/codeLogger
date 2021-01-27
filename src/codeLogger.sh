@@ -4,7 +4,7 @@
 
 # Creating list of files to log
 cd $1
-find $i -type f \( -iname \*.R -o -iname \*.py -o -iname \*.do \) >> ../filesToLog.txt
+find $i -type f \( -iname \*.R -o -iname \*.py -o -iname \*.do \) | sed "s/\.\// /g">> ../filesToLog.txt
 
 # Mirroring the directory structure of the folder containing code
 for i in */
