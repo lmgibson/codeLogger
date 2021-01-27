@@ -33,7 +33,7 @@ cat ./logs/filesToLog.txt | while read i; do
         today=$(date +"%Y-%m-%d-%H%M")
         fileName=$(echo "./logs/$i" | sed "s/\.do/_$today\.txt/")
         stata -e do $1/$i
-        cat $(echo $i | sed "s/\.do/\.log/") >& $fileName
+        cat $(echo $i | sed "s/\.do/\.log/" | sed "s@.*/@@") >& $fileName
         rm *.log
         echo "Logged $i"
     fi
