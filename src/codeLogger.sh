@@ -27,7 +27,7 @@ cat ./logs/filesToLog.txt | while read i; do
     elif [[ $i == *".py" ]]; then
         today=$(date +"%Y-%m-%d-%H%M")
         fileName=$(echo "./logs/$i" | sed "s/\.py/_$today\.txt/")
-        python.exe $1/$i >& $fileName
+        python $1/$i >& $fileName
         echo "Logged $i"
     elif [[ $i == *".do" ]]; then
         today=$(date +"%Y-%m-%d-%H%M")
