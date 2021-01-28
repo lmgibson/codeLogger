@@ -1,1 +1,0 @@
-/Users/Metaverse/Desktop/projects/codeLogger/src/codeLogger.sh: line 30: python.exe: command not found
